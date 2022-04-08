@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/starbucks landingpage/styles.css">
+    <title>starbucks landing page</title>
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="/starbucks landingpage/img/logo.png"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just coffee<br>It's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, earum? Adipisci, architecto ratione magnam doloremque illo facere porro non laudantium impedit velit quae. Quod, architecto quis blanditiis dolores similique accusamus!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgbox">
+                <img src="/starbucks landingpage/img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="https://i.imgur.com/PloI9gv.png" onclick="imgSlider('/starbucks landingpage/img/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="https://i.imgur.com/byfZnQG.png" onclick="imgSlider('/starbucks landingpage/img/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="https://i.imgur.com/7hKCZiS.png" onclick="imgSlider('/starbucks landingpage/img/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="/starbucks landingpage/img/facebook.png"></a></li>
+            <li><a href="#"><img src="/starbucks landingpage/img/twitter.png"></a></li>
+            <li><a href="#"><img src="/starbucks landingpage/img/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector(".circle"); circle.style.background = color;
+        }
+
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
